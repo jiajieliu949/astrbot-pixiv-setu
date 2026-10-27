@@ -203,7 +203,7 @@ _rate_limiter = RateLimiter()
     "AstrBot User",
     "Pixiv 涩图",
     "1.0.0",
-    "https://github.com/yourname/astrbot_plugin_pixiv_setu",
+    "https://github.com/jiajieliu949/astrbot-pixiv-setu",
 )
 class PixivSetuPlugin(Star):
     """检测到"来份涩图"时，从 Pixiv（Lolicon API）随机发一张涩图，支持 tag 匹配。"""
