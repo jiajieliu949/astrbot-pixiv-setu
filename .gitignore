@@ -1,0 +1,18 @@
+# Python caches and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.claude/
+
+# Runtime data and downloaded images
+data/
+imgs/
+
+# Local/editor files
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,76 @@
+{
+  "trigger_word": {
+    "description": "触发词",
+    "type": "string",
+    "default": "来份涩图",
+    "hint": "消息中包含该短语即触发（子串匹配）。触发词之后的文字会被当作标签解析"
+  },
+  "reply_text": {
+    "description": "发图附带文字",
+    "type": "string",
+    "default": "给你涩图~",
+    "hint": "图片发送成功后附带的一句话；开启 show_pid 时会额外追加 PID 行"
+  },
+  "r18": {
+    "description": "R18 等级（群聊）",
+    "type": "int",
+    "default": 0,
+    "hint": "0=非 R18（默认，安全）；1=仅 R18；2=混合。仅对群聊生效，私聊见下方两项。请遵守相关法律法规，谨慎开启"
+  },
+  "private_r18_enable": {
+    "description": "私聊允许 R18",
+    "type": "bool",
+    "default": false,
+    "hint": "总开关。开启后私聊按「私聊 R18 等级」出图；关闭时私聊一律只发非 R18，不受群聊 r18 配置影响"
+  },
+  "private_r18": {
+    "description": "私聊 R18 等级",
+    "type": "int",
+    "default": 0,
+    "hint": "仅在「私聊允许 R18」开启时生效。0=非 R18；1=仅 R18；2=混合"
+  },
+  "exclude_ai": {
+    "description": "排除 AI 生成图",
+    "type": "bool",
+    "default": true,
+    "hint": "过滤掉 AI 生成的投稿"
+  },
+  "tag_alias": {
+    "description": "标签别名映射",
+    "type": "text",
+    "default": "",
+    "hint": "中文标签到 Pixiv 英文标签的映射，逗号或换行分隔，格式：猫娘=cat_girl,白丝=white_pantyhose。例如「来份涩图 猫娘」会映射成 cat_girl 再请求"
+  },
+  "tag_match": {
+    "description": "多标签匹配方式",
+    "type": "string",
+    "default": "and",
+    "options": ["and", "or"],
+    "hint": "and=多个标签必须全部命中（扁平数组）；or=命中任一标签即可（嵌套数组）"
+  },
+  "size": {
+    "description": "图片尺寸",
+    "type": "string",
+    "default": "original",
+    "options": ["original", "regular", "small", "thumb", "mini"],
+    "hint": "original=原图（最大）；regular=常规。原图过大时部分平台可能发不出去，可改 regular"
+  },
+  "random_pool": {
+    "description": "随机候选池大小",
+    "type": "int",
+    "default": 5,
+    "hint": "一次拉取这么多张候选，再从中随机挑一张，避免总是拿到最新投稿。范围 1-20"
+  },
+  "proxy": {
+    "description": "图片代理",
+    "type": "string",
+    "default": "",
+    "hint": "留空=使用 Pixiv 原图地址（直连可能慢或被墙）；可填 i.sukon.cc 等 Lolicon API 支持的代理域名"
+  },
+  "show_pid": {
+    "description": "附带 Pixiv PID",
+    "type": "bool",
+    "default": true,
+    "hint": "在回复末尾附带作品 PID 与 Pixiv 链接，方便按图索源"
+  }
+}

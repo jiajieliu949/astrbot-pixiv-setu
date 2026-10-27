@@ -1,0 +1,7 @@
+name: astrbot_plugin_pixiv_setu
+display_name: Pixiv 涩图
+desc: 检测到"来份涩图"时从 Pixiv（Lolicon API）随机发一张涩图，支持 tag 匹配与中文标签别名
+version: v1.0.0
+author: AstrBot User
+repo: https://github.com/jiajieliu949/astrbot-pixiv-setu
+astrbot_version: ">=4.0.0"
